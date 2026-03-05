@@ -44,9 +44,9 @@
     "swc": false,
     "disableSWC": true
   },
-  "appid": "wxaba230c504cdd3a9",
+  "appid": "wx8fb8cb8211684b51",
   "projectname": "医伴医生端",
-  "libVersion": "3.13.1",
+  "libVersion": "3.14.3",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {
     "search": {
