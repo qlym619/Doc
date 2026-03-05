@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "openapi": [],
+    "databases": {
+      "appointments": {
+        "update": true
+      }
+    },
+    "functions": [],
+    "env": true
+  }
+}

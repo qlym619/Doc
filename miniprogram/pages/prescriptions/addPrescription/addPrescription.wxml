@@ -1,0 +1,56 @@
+<view class="container">
+  <form bindsubmit="submitForm">
+    <view class="form-item">
+      <text class="label">患者姓名</text>
+      <input type="text" name="patientName" placeholder="请输入患者姓名" value="{{formData.patientName}}" bindinput="bindInput" data-field="patientName" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">联系电话</text>
+      <input type="text" name="patientPhone" placeholder="请输入联系电话" value="{{formData.patientPhone}}" bindinput="bindInput" data-field="patientPhone" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">患者性别</text>
+      <radio-group name="patientGender" bindchange="bindGenderChange">
+        <label class="radio-label">
+          <radio value="male" checked="{{formData.patientGender === 'male'}}" />
+          <text>男</text>
+        </label>
+        <label class="radio-label">
+          <radio value="female" checked="{{formData.patientGender === 'female'}}" />
+          <text>女</text>
+        </label>
+      </radio-group>
+    </view>
+    
+    <view class="form-item">
+      <text class="label">患者年龄</text>
+      <input type="number" name="patientAge" placeholder="请输入患者年龄" value="{{formData.patientAge}}" bindinput="bindInput" data-field="patientAge" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">诊断结果</text>
+      <input type="text" name="diagnosis" placeholder="请输入诊断结果" value="{{formData.diagnosis}}" bindinput="bindInput" data-field="diagnosis" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">药品列表</text>
+      <view class="medicine-list">
+        <view wx:for="{{formData.medicines}}" wx:key="index" class="medicine-item">
+          <input type="text" placeholder="药品名称" value="{{item.name}}" bindinput="bindMedicineInput" data-index="{{index}}" data-field="name" />
+          <input type="text" placeholder="用法用量" value="{{item.dosage}}" bindinput="bindMedicineInput" data-index="{{index}}" data-field="dosage" />
+          <button type="warn" size="mini" bindtap="removeMedicine" data-index="{{index}}">删除</button>
+        </view>
+        <button type="primary" size="mini" bindtap="addMedicine">添加药品</button>
+      </view>
+    </view>
+    
+    <view class="form-item">
+      <text class="label">医嘱</text>
+      <textarea name="advice" placeholder="请输入医嘱" value="{{formData.advice}}" bindinput="bindInput" data-field="advice" />
+    </view>
+    
+    <button formType="submit" class="submit-btn" disabled="{{!canSubmit}}">提交处方</button>
+  </form>
+</view>

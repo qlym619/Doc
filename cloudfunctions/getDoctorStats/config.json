@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "openapi": [],
+    "databases": {
+      "appointments": {
+        "read": true
+      },
+      "prescriptions": {
+        "read": true
+      }
+    },
+    "functions": [],
+    "env": true
+  }
+}

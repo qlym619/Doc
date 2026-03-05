@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="detail-card">
+    <view class="card-header">
+      <text class="title">预约信息</text>
+      <view class="status-badge" style="background-color: {{getStatusColor(appointment.status)}}">
+        {{getStatusText(appointment.status)}}
+      </view>
+    </view>
+    
+    <view class="card-content">
+      <view class="info-item">
+        <text class="label">患者姓名：</text>
+        <text class="value">{{appointment.patientName}}</text>
+      </view>
+      
+      <view class="info-item">
+        <text class="label">联系电话：</text>
+        <text class="value">{{appointment.phone}}</text>
+      </view>
+      
+      <view class="info-item">
+        <text class="label">预约科室：</text>
+        <text class="value">{{appointment.department}}</text>
+      </view>
+      
+      <view class="info-item">
+        <text class="label">预约医生：</text>
+        <text class="value">{{appointment.doctorName}}</text>
+      </view>
+      
+      <view class="info-item">
+        <text class="label">预约时间：</text>
+        <text class="value">{{formatDate(appointment.appointmentTime)}}</text>
+      </view>
+      
+      <view class="info-item">
+        <text class="label">预约原因：</text>
+        <text class="value">{{appointment.reason}}</text>
+      </view>
+      
+      <view class="info-item">
+        <text class="label">创建时间：</text>
+        <text class="value">{{formatDate(appointment.createdAt)}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="action-buttons" wx:if="{{appointment.status === 'pending'}}">
+    <button type="primary" class="btn" bindtap="confirmAppointment">确认预约</button>
+    <button type="warn" class="btn" bindtap="cancelAppointment">取消预约</button>
+  </view>
+  
+  <view class="action-buttons" wx:if="{{appointment.status === 'confirmed' || appointment.status === 'completed'}}">
+    <button type="primary" class="btn" bindtap="createPrescription">开处方</button>
+  </view>
+</view>

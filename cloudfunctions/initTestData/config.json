@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "openapi": [],
+    "databases": {
+      "doctors": {
+        "read": true,
+        "add": true
+      },
+      "appointments": {
+        "read": true,
+        "add": true
+      },
+      "prescriptions": {
+        "read": true,
+        "add": true
+      }
+    },
+    "functions": [],
+    "env": true
+  }
+}

@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="profile-card">
+    <view class="avatar-container">
+      <image class="avatar" src="{{doctorInfo.avatar || '../../images/avatar.png'}}"></image>
+    </view>
+    <view class="profile-info">
+      <text class="doctor-name">{{doctorInfo.name}}</text>
+      <text class="doctor-title">{{doctorInfo.title}}</text>
+      <text class="doctor-department">{{doctorInfo.department}}</text>
+    </view>
+  </view>
+  
+  <view class="settings-list">
+    <view class="setting-item">
+      <text class="setting-label">个人信息</text>
+      <text class="setting-value">{{doctorInfo.name}}</text>
+      <text class="arrow">→</text>
+    </view>
+    
+    <view class="setting-item">
+      <text class="setting-label">科室</text>
+      <text class="setting-value">{{doctorInfo.department}}</text>
+      <text class="arrow">→</text>
+    </view>
+    
+    <view class="setting-item">
+      <text class="setting-label">职称</text>
+      <text class="setting-value">{{doctorInfo.title}}</text>
+      <text class="arrow">→</text>
+    </view>
+    
+    <view class="setting-item">
+      <text class="setting-label">联系电话</text>
+      <text class="setting-value">{{doctorInfo.phone}}</text>
+      <text class="arrow">→</text>
+    </view>
+  </view>
+  
+  <button class="logout-btn" bindtap="logout">退出登录</button>
+</view>

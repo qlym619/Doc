@@ -1,0 +1,93 @@
+.container {
+  min-height: 100vh;
+}
+
+.filter-bar {
+  display: flex;
+  background-color: #fff;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  overflow-x: auto;
+}
+
+.filter-item {
+  padding: 10rpx 20rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  white-space: nowrap;
+}
+
+.filter-item.active {
+  color: #1976d2;
+  border-bottom: 2rpx solid #1976d2;
+}
+
+.appointment-list {
+  padding: 20rpx;
+}
+
+.appointment-item {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15rpx;
+}
+
+.patient-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.appointment-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.appointment-body {
+  margin-bottom: 15rpx;
+}
+
+.department {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 5rpx;
+}
+
+.doctor {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 5rpx;
+}
+
+.status {
+  display: block;
+  font-size: 24rpx;
+  color: #1976d2;
+}
+
+.appointment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointment-id {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.arrow {
+  font-size: 30rpx;
+  color: #999;
+}

@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="filter-bar">
+    <view 
+      wx:for="{{filterOptions}}" 
+      wx:key="{{item.value}}"
+      class="filter-item {{activeFilter === item.value ? 'active' : ''}}"
+      bindtap="setFilter"
+      data-value="{{item.value}}"
+    >
+      {{item.label}}
+    </view>
+  </view>
+  
+  <view class="appointment-list">
+    <view 
+      wx:for="{{appointments}}" 
+      wx:key="{{item._id}}" 
+      class="appointment-item"
+      bindtap="viewAppointmentDetail"
+      data-id="{{item._id}}"
+    >
+      <view class="appointment-header">
+        <text class="patient-name">{{item.patientName}}</text>
+        <text class="appointment-time">{{item.appointmentTime}}</text>
+      </view>
+      <view class="appointment-body">
+        <text class="department">{{item.department}}</text>
+        <text class="doctor">{{item.doctorName}}</text>
+        <text class="status">{{item.status}}</text>
+      </view>
+      <view class="appointment-footer">
+        <text class="appointment-id">预约号: {{item.appointmentId}}</text>
+        <text class="arrow">→</text>
+      </view>
+    </view>
+  </view>
+</view>

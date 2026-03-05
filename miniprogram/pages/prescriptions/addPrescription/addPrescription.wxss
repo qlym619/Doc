@@ -1,0 +1,80 @@
+.container {
+  padding: 20rpx;
+  min-height: 100vh;
+}
+
+.form-item {
+  background-color: white;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  display: block;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 15rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 5rpx;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+textarea {
+  width: 100%;
+  padding: 15rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 5rpx;
+  font-size: 28rpx;
+  min-height: 150rpx;
+  resize: none;
+}
+
+.radio-group {
+  display: flex;
+  gap: 40rpx;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+  font-size: 28rpx;
+}
+
+.medicine-list {
+  margin-top: 10rpx;
+}
+
+.medicine-item {
+  display: flex;
+  gap: 10rpx;
+  margin-bottom: 10rpx;
+  align-items: center;
+}
+
+.medicine-item input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.submit-btn {
+  margin-top: 30rpx;
+  padding: 20rpx;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  background-color: #1976d2;
+  color: white;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+}

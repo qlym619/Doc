@@ -1,0 +1,94 @@
+.container {
+  padding: 20rpx;
+  min-height: 100vh;
+}
+
+.profile-card {
+  background-color: white;
+  padding: 30rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+  margin-right: 30rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.doctor-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.doctor-title {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 5rpx;
+  display: block;
+}
+
+.doctor-department {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+}
+
+.settings-list {
+  background-color: white;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 30rpx;
+}
+
+.setting-item {
+  padding: 25rpx 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-label {
+  font-size: 30rpx;
+  color: #333;
+  flex: 1;
+}
+
+.setting-value {
+  font-size: 28rpx;
+  color: #999;
+  margin-right: 20rpx;
+}
+
+.arrow {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.logout-btn {
+  margin-top: 30rpx;
+  padding: 20rpx;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  background-color: #f44336;
+  color: white;
+}
